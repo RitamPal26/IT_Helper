@@ -1,0 +1,13 @@
+{% extends "layout.html" %} {% block content %}
+<h1>IT Admin Dashboard</h1>
+<p>
+  Welcome to the mock IT administration portal. Use the navigation links above
+  to manage employee accounts.
+</p>
+
+<div>
+  <h2>System Status</h2>
+  <p>Total Active Users: {{ users|length }}</p>
+  <p>Server: Online</p>
+</div>
+{% endblock %}
