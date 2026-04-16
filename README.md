@@ -5,7 +5,11 @@ IT Helper is a proof-of-concept system demonstrating how Artificial Intelligence
 1. **Mock IT Admin Panel:** A lightweight, functional web application serving as a simulated corporate IT dashboard.
 2. **Autonomous AI Agent:** An AI worker that takes natural-language requests (e.g., "Reset John's password") and physically navigates the web interface using browser automation to complete the task, exactly like a human IT professional would.
 
-## 🛠 Tech Stack
+## Demo Video
+
+https://www.loom.com/share/053a0b806bb14525880584d1469af0fa
+
+## Tech Stack
 
 - **AI Agent framework:** [Browser Use Cloud SDK](https://browser-use.com/)
 - **Backend Web Server:** Python, FastAPI
@@ -36,6 +40,7 @@ Create a `.env` file in the root directory and add your Browser Use Cloud API ke
 
 ```text
 BROWSER_USE_API_KEY=your_api_key_here
+NGROK_URL=your_ngrok_url_here
 ```
 
 ### 4. Start the Mock IT Panel

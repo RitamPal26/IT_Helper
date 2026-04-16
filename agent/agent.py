@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 from dotenv import load_dotenv
 from browser_use_sdk.v3 import AsyncBrowserUse
 
@@ -37,9 +38,14 @@ class ITSupportAgent:
 
 async def main():
     """Main execution block to run multiple tasks."""
-    agent = ITSupportAgent(base_url="https://4f2f-223-178-81-16.ngrok-free.app/")
+    ngrok_url = os.getenv("NGROK_URL")
+    
+    if not ngrok_url:
+        raise ValueError("NGROK_URL is missing from the .env file.")
 
-    req1 = "Reset the password for john@company.com to AgentPass2026"
+    agent = ITSupportAgent(base_url=ngrok_url)
+
+    req1 = "Reset the password for john@company.com to old_password_123"
     res1 = await agent.execute_task(req1)
     print(f"Result 1: {res1}\n")
     print("-" * 40 + "\n")
